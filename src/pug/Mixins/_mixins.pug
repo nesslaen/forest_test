@@ -1,0 +1,10 @@
+mixin head-meta(title, description,href)
+		title=title
+		meta(name="description" content=description)
+		link(rel="stylesheet" href=href)
+
+mixin table(tr,td)
+				-for (var x=0; x<tr; x++)
+					tr
+						-for (var y=0; y<td; y++)
+							td
