@@ -1,6 +1,6 @@
-mixin head-meta(title, description,href)
+mixin head-meta(title, charset,href)
 		title=title
-		meta(name="description" content=description)
+		meta(charset=charset)
 		link(rel="stylesheet" href=href)
 
 mixin table(tr,td)
@@ -13,4 +13,8 @@ mixin menu(li)
 		ul.menu
 			-for (var x=0; x<li; x++)
 				li 
-					a(href="#")
+					a(href="#") 
+//- mixin form-generate(input)
+//- 	form(action= "#")
+//- 		-for(var x=0; x<input; x++)
+//- 			input(type="text")
