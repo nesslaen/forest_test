@@ -1,0 +1,17 @@
+$base-line-height: 16px;
+$btn-bg: red;
+.btn{
+	display: inline-block;
+	background: $btn-bg;
+	padding: 0 3*$base-line-height;
+	height: 2*$base-line-height;
+	line-height: 2*$base-line-height;
+	font-size: $base-line-height;
+	font-weight: #ccc;
+	&__submit{
+		background: green;
+	}
+	.icon{
+		background: url();
+	}
+}

@@ -1,6 +1,11 @@
 header
 	span.logo
 	+menu(3)
+	-var menu=["Home","About us","Contacts"]
+	ul.menu
+		each item in menu
+			li
+				a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
 	div.header-content
 		div.header-content__description
 			h1 Wood

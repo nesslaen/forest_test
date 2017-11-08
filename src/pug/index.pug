@@ -5,3 +5,15 @@ block head
 		'utf-8',
 		'#'
 	)
+block lecture
+	-var htw = [{title: "Order registration.", text: "The process is fast and easy – signup and fill the order form, that’s it!"}, {title: "Writer selection.", text: "Choose the writer you want to work with, and start working with him/her on your order right away."}, {title :"Progress tracking.", text: "Give regular feedback on drafts and discuss the order’s progress with your writer."}, {title: "Product delivery.", text: "Review the finished product and submit it to your supervisor for an A grade!"}]
+
+	ul
+		each item,index in htw
+			li
+				span.title= item.title
+				span.text= item.text
+				li=index
+
+block prepend header
+	-var currentpage = home
