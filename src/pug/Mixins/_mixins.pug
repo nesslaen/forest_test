@@ -8,3 +8,9 @@ mixin table(tr,td)
 					tr
 						-for (var y=0; y<td; y++)
 							td
+mixin menu(li)
+	nav
+		ul.menu
+			-for (var x=0; x<li; x++)
+				li 
+					a(href="#")
