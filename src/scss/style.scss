@@ -15,3 +15,93 @@ $btn-bg: red;
 		background: url();
 	}
 }
+
+
+@mixin btn($display,$height,$width,$color,$bcolor, $lineheight){
+	display: $display;
+	height: $height;
+	width: $width;
+	color: $color;
+	background-color: $bcolor;
+	line-height: $lineheight *2;
+	font-size: $lineheight;
+}
+
+a.yellow_btn{
+	@include btn(block,40px,72px,black,yellow, 20px);
+}
+
+a.red_btn{
+	@include btn(block,40px,72px,black,red, 40px);
+}
+
+
+.message{
+	border: 1px solid #ccc;
+	padding: 10px;
+	color: #333;
+}
+
+.success{
+	@extend .message;
+	border-color: green;
+}
+
+form %flat-btn{
+	background: transparent;
+}
+
+a{
+	@extend %flat-btn;
+	&:hover{
+		background: red;
+	}
+}
+
+.btn{
+	font-size: 12px;
+	@media (min-width: 600px){
+		font-size: 16px;
+	}
+}
+
+$height: 40px;
+$weight: 30px;
+
+.button{
+	color: red;
+	height: $height;
+	text-decoration: underline;
+	@if $height == 40px{
+		position: relative;
+	}
+	@else {
+		position:absolute;}
+}
+
+@for $i from 1 through 2{
+	.item-#{$i}{background-image: url(../img/boy#{$i}.jpg);}
+}
+
+@for $i from 1 through 12{
+	.col-#{$i}{
+		width: (100%%12)*$i;
+	}
+}
+
+@each $social in facebook google instagram twitter{
+	.#{$social}-icon{
+		background-image: url("../img/icons/#{$social}.png");
+	}
+}
+
+$grid-width:40px;
+$gutter-width:10px;
+
+@function grid-width($n){
+	@return $n*$grid-width+($n - 1)*$gutter-width;
+}
+
+#sidebar{
+	width: grid-width(5);
+}

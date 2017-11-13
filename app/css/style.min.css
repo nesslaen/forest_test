@@ -10,3 +10,104 @@
     background: green; }
   .btn .icon {
     background: url(); }
+
+a.yellow_btn {
+  display: block;
+  height: 40px;
+  width: 72px;
+  color: black;
+  background-color: yellow;
+  line-height: 40px;
+  font-size: 20px; }
+
+a.red_btn {
+  display: block;
+  height: 40px;
+  width: 72px;
+  color: black;
+  background-color: red;
+  line-height: 80px;
+  font-size: 40px; }
+
+.message, .success {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333; }
+
+.success {
+  border-color: green; }
+
+form a {
+  background: transparent; }
+
+a:hover {
+  background: red; }
+
+.btn {
+  font-size: 12px; }
+  @media (min-width: 600px) {
+    .btn {
+      font-size: 16px; } }
+
+.button {
+  color: red;
+  height: 40px;
+  text-decoration: underline;
+  position: relative; }
+
+.item-1 {
+  background-image: url(../img/boy1.jpg); }
+
+.item-2 {
+  background-image: url(../img/boy2.jpg); }
+
+.col-1 {
+  width: 4%; }
+
+.col-2 {
+  width: 8%; }
+
+.col-3 {
+  width: 12%; }
+
+.col-4 {
+  width: 16%; }
+
+.col-5 {
+  width: 20%; }
+
+.col-6 {
+  width: 24%; }
+
+.col-7 {
+  width: 28%; }
+
+.col-8 {
+  width: 32%; }
+
+.col-9 {
+  width: 36%; }
+
+.col-10 {
+  width: 40%; }
+
+.col-11 {
+  width: 44%; }
+
+.col-12 {
+  width: 48%; }
+
+.facebook-icon {
+  background-image: url("../img/icons/facebook.png"); }
+
+.google-icon {
+  background-image: url("../img/icons/google.png"); }
+
+.instagram-icon {
+  background-image: url("../img/icons/instagram.png"); }
+
+.twitter-icon {
+  background-image: url("../img/icons/twitter.png"); }
+
+#sidebar {
+  width: 240px; }
