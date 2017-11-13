@@ -5,15 +5,105 @@ block head
 		'utf-8',
 		'#'
 	)
-block lecture
-	-var htw = [{title: "Order registration.", text: "The process is fast and easy – signup and fill the order form, that’s it!"}, {title: "Writer selection.", text: "Choose the writer you want to work with, and start working with him/her on your order right away."}, {title :"Progress tracking.", text: "Give regular feedback on drafts and discuss the order’s progress with your writer."}, {title: "Product delivery.", text: "Review the finished product and submit it to your supervisor for an A grade!"}]
+//- block lecture
+//- 	-var htw = [{title: "Order registration.", text: "The process is fast and easy – signup and fill the order form, that’s it!"}, {title: "Writer selection.", text: "Choose the writer you want to work with, and start working with him/her on your order right away."}, {title :"Progress tracking.", text: "Give regular feedback on drafts and discuss the order’s progress with your writer."}, {title: "Product delivery.", text: "Review the finished product and submit it to your supervisor for an A grade!"}]
 
-	ul
-		each item,index in htw
+//- 	ul
+//- 		each item,index in htw
+//- 			li
+//- 				span.title= item.title
+//- 				span.text= item.text
+//- 				li=index
+
+//- block prepend header
+//- 	-var currentpage = home
+
+block tabs
+	div.tabs
+		ul
 			li
-				span.title= item.title
-				span.text= item.text
-				li=index
-
-block prepend header
-	-var currentpage = home
+				input(type="radio" name="tab" checked="checked" id="tab_1")
+				label(for="tab_1").tabs__label Tab 1
+				div.tabs__tabs-info
+					h2 The forest is a first-person open
+					img(src="img/city.jpg")
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					a(href="#").tabs__tabs-info__btn Download
+			li
+				input(type="radio" name="tab" id="tab_2")
+				label(for="tab_2").tabs__label Tab 2
+				div.tabs__tabs-info
+					h2 The forest is a first-person open
+					img(src="img/city.jpg")
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa, quis nesciunt. Vitae, eveniet. Molestiae sint reiciendis
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					a(href="#").tabs__tabs-info__btn Download
+			li
+				input(type="radio" name="tab" id="tab_3")
+				label(for="tab_3").tabs__label Tab 3
+				div.tabs__tabs-info
+					h2 The forest is a first-person open
+					img(src="img/city.jpg")
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					a(href="#").tabs__tabs-info__btn Download
+block structure
+	div.structure
+		img(src="img/lake.jpg" alt="lake")
+		h2 Structure type
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		ul
+			li
+				h2 Understory
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+			li
+				h2 Canopy
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+block evolution
+	div.evolution
+		img(src="img/lake2.jpg")
+		h2 Long forest evolution
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+block prices
+	div.prices
+		h1 Pricing options
+		h2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		div.prices__prices-container
+			div.prices__prices-container__block
+				h3 Basic
+				h4 $
+					span 0 
+				p Free for life
+				ul
+					li Canopy
+					li Clearcutting
+					li Close to nature
+					li Forestry
+					li Cloud Forest
+					li Chase
+			div.prices__prices-container__block
+				h3 Professional
+				h4 $
+					span 19
+				p Monthly payment
+				ul
+					li Canopy
+					li Clearcutting
+					li Close to nature
+					li Forestry
+					li Cloud Forest
+					li Chase
+			div.prices__prices-container__block
+				h3 Enterprice
+				h4 $
+					span 70
+				p Monthly payment
+				ul
+					li Canopy
+					li Clearcutting
+					li Close to nature
+					li Forestry
+					li Cloud Forest
+					li Chase
