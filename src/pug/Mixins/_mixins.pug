@@ -28,7 +28,7 @@ mixin menu()
 			each item in menu
 				li
 					if item === currentpage
-						a.active(href=item.toLowerCase().replace("\ ", "-")+".html")=item
+						a.active(href="#")=item
 					else if item != currentpage
 						a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
 
