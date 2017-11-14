@@ -51,12 +51,12 @@ form %flat-btn{
 	background: transparent;
 }
 
-a{
-	@extend %flat-btn;
-	&:hover{
-		background: red;
-	}
-}
+// a{
+// 	@extend %flat-btn;
+// 	&:hover{
+// 		background: red;
+// 	}
+// }
 
 .btn{
 	font-size: 12px;
