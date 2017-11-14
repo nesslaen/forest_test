@@ -7,15 +7,33 @@ mixin head-meta(title, charset,href)
 //- 				-for (var x=0; x<tr; x++)
 //- 					tr
 //- 						-for (var y=0; y<td; y++)
-//- 							td
-mixin menu(li)
-	nav
-		ul.menu
-			-for (var x=0; x<li; x++)
+//-
+
+
+
+mixin social()
+	-var list = ["facebook.com", "twitter.com","google.com","pinterest.com","instagram.com","slack.com","rss.com" ]
+		ul.social
+			each item in list
 				li 
-					a(href="#") 
+					a(href=item)
 //- mixin form-generate(input)
 //- 	form(action= "#")
 //- 		-for(var x=0; x<input; x++)
 //- 			input(type="text")
 
+mixin menu() 
+	-var menu=["Home","About us","Contacts"]
+		ul.menu
+			each item in menu
+				li
+					if item === currentpage
+						a.active(href=item.toLowerCase().replace("\ ", "-")+".html")=item
+					else if item != currentpage
+						a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
+
+mixin contacts_form()
+	-var forma=[{type:"text", placeholder:"name"},{type:"text",placeholder:"email"},{type:"text", placeholder:"message"},{type:"text", placeholder:"message"},{type:"submit", value:"Send Message"}]
+	form(action="#")
+		each item in forma
+			input(type=item.type placeholder=item.placeholder value=item.value)

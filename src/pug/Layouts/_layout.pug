@@ -4,6 +4,11 @@ doctype html
 html
 	head
 		block head
+			+head-meta(
+			'title',
+			'utf-8',
+			'css/style.min.css'
+		)
 	body
 		block header
 			include ../Includes/_header
@@ -23,5 +28,4 @@ html
 			include ../Includes/_contacts
 		block footer
 			include ../Includes/_footer
-		//- block lecture
 			
