@@ -1,17 +1,25 @@
 header
 	span.logo
-	+menu()
+	-var menu=["index","About us","Contacts"]
+	nav
+		ul.menu
+			each item in menu
+				li
+					if item === currentpage && item === "index"
+						a.active(href="#")=home
+					else if item != currentpage && item === "index"
+						a(href=item.toLowerCase().replace("\ ", "-")+".html")=home
+					else if item === currentpage 
+						a.active(href="#")=item
+					else if item != currentpage
+						a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
 	div.header-content
 		div.header-content__description
 			h1 Wood
 			h2 The forest is a large area with trees or other woody vegetation
 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		div.header-content__form
+			-var headerform=[{type:"text", placeholder:"name"},{type:"text",placeholder:"email"},{type:"text", placeholder:"message"},{type:"submit", value:"Send Message"}]
 			form(action="#")
-				input(type="text" placeholder="name")
-				input(type="text" placeholder="email")
-				input(type="text" placeholder="message")
-				input(type="submit" value="Send Message")
-			
-
-	
+				each item in headerform
+					input(type=item.type placeholder=item.placeholder value=item.value)

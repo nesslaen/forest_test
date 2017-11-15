@@ -11,35 +11,7 @@ block prepend header
 	-var home ="Home"
 
 block tabs
-	div.tabs
-		ul
-			li
-				input(type="radio" name="tab" checked="checked" id="tab_1")
-				label(for="tab_1").tabs__label Tab 1
-				div.tabs__tabs-info
-					h2 The forest is a first-person open
-					img(src="img/city.jpg")
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					a(href="#").tabs__tabs-info__btn Download
-			li
-				input(type="radio" name="tab" id="tab_2")
-				label(for="tab_2").tabs__label Tab 2
-				div.tabs__tabs-info
-					h2 The forest is a first-person open
-					img(src="img/city.jpg")
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ipsa, quis nesciunt. Vitae, eveniet. Molestiae sint reiciendis
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					a(href="#").tabs__tabs-info__btn Download
-			li
-				input(type="radio" name="tab" id="tab_3")
-				label(for="tab_3").tabs__label Tab 3
-				div.tabs__tabs-info
-					h2 The forest is a first-person open
-					img(src="img/city.jpg")
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					a(href="#").tabs__tabs-info__btn Download
+	+tabs(3)
 block structure
 	div.structure
 		img(src="img/lake.jpg" alt="lake")

@@ -3,45 +3,32 @@ mixin head-meta(title, charset,href)
 		meta(charset=charset)
 		link(rel="stylesheet" href=href)
 
+mixin tabs(tabslength)
+	div.tabs
+		ul
+			-for(var x=0; x<tabslength; x++)
+				li
+					input(type="radio" name="tab" checked="checked" id="tab_1")
+					label(for="tab_1").tabs__label Tab 1
+					div.tabs__tabs-info
+						h2 The forest is a first-person open
+						img(src="img/city.jpg")
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						a(href="404.html").tabs__tabs-info__btn Download
+
+
+
+
+
 //- mixin table(tr,td)
 //- 				-for (var x=0; x<tr; x++)
 //- 					tr
 //- 						-for (var y=0; y<td; y++)
 //-
 
-
-
-mixin social()
-	-var list = ["facebook.com", "twitter.com","google.com","pinterest.com","instagram.com","slack.com","rss.com" ]
-		ul.social
-			each item in list
-				li 
-					a(href=item)
 //- mixin form-generate(input)
 //- 	form(action= "#")
 //- 		-for(var x=0; x<input; x++)
 //- 			input(type="text")
 
-mixin menu() 
-	-var menu=["index","About us","Contacts"]
-		nav
-			ul.menu
-				each item in menu
-					li
-						if item === currentpage && item === "index"
-							a.active(href="#")=home
-						else if item != currentpage && item === "index"
-							a(href=item.toLowerCase().replace("\ ", "-")+".html")=home
-						else if item === currentpage 
-							a.active(href="#")=item
-						else if item != currentpage
-							a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
-
-
-
-
-mixin contacts_form()
-	-var forma=[{type:"text", placeholder:"name"},{type:"text",placeholder:"email"},{type:"text", placeholder:"message"},{type:"text", placeholder:"message"},{type:"submit", value:"Send Message"}]
-	form(action="#")
-		each item in forma
-			input(type=item.type placeholder=item.placeholder value=item.value)

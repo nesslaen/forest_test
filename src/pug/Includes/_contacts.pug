@@ -1,4 +1,7 @@
 div.contacts
 	h1 Contact us
 	h2 For a broader coverage related to this topic. 
-	+contacts_form()
+	-var forma=[{type:"text", placeholder:"name"},{type:"text",placeholder:"email"},{type:"text", placeholder:"message"},{type:"text", placeholder:"message"},{type:"submit", value:"Send Message"}]
+	form(action="#")
+		each item in forma
+			input(type=item.type placeholder=item.placeholder value=item.value)
