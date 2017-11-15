@@ -24,13 +24,14 @@ mixin social()
 
 mixin menu() 
 	-var menu=["Home","About us","Contacts"]
-		ul.menu
-			each item in menu
-				li
-					if item === currentpage
-						a.active(href="#")=item
-					else if item != currentpage
-						a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
+		nav
+			ul.menu
+				each item in menu
+					li
+						if item === currentpage
+							a.active(href="#")=item
+						else if item != currentpage
+							a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
 
 mixin contacts_form()
 	-var forma=[{type:"text", placeholder:"name"},{type:"text",placeholder:"email"},{type:"text", placeholder:"message"},{type:"text", placeholder:"message"},{type:"submit", value:"Send Message"}]

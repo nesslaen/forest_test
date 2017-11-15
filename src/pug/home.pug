@@ -1,7 +1,9 @@
 extends Layouts/_layout.pug
-block prepend head
+block head
 	+head-meta(
-		'WOOD-home'
+		'WOOD-home',
+		'utf-8',
+		'css/style.min.css'
 	)
 
 block prepend header

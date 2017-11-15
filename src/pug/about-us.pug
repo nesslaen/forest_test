@@ -1,7 +1,9 @@
 extends Layouts/_layout.pug
-block prepend head
+block head
 	+head-meta(
-		'WOOD-about-us'
+		'WOOD-About-us',
+		'utf-8',
+		'css/style.min.css'
 	)
 block prepend header
 	-var currentpage = "About us";
