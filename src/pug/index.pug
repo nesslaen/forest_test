@@ -71,3 +71,22 @@ block prices
 					li Forestry
 					li Cloud Forest
 					li Chase
+
+
+
+		-var prices=[{h3:"Basic", h4:"$", span:"0", p:"Free for life", li1:"Canopy", li2:"Clearcutting", li3:"Close to nature", li4:"Forestry", li5:"Cloud Forest", li6: "Chase"},{h3:"Professional", h4:"$", span:"19", p:"Monthly payment", li1:"Canopy", li2:"Clearcutting", li3:"Close to nature", li4:"Forestry", li5:"Cloud Forest", li6: "Chase"},{h3:"Enterprice", h4:"$", span:"70", p:"Montly payment", li1:"Canopy", li2:"Clearcutting", li3:"Close to nature", li4:"Forestry", li5:"Cloud Forest", li6: "Chase"}]
+		
+		div.prices-test-container
+			each item in prices
+				div.prices-test-container__block
+					h3=item.h3
+					h4=item.h4
+						span=item.span
+					p=item.p
+					ul
+						li=item.li1
+						li=item.li2
+						li=item.li3
+						li=item.li4
+						li=item.li5
+						li=item.li6
