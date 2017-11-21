@@ -2,6 +2,7 @@ mixin head-meta(title, charset,href)
 		title=title
 		meta(charset=charset)
 		link(rel="stylesheet" href=href)
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
 mixin tabs(tabslength)
 	div.tabs
@@ -12,7 +13,7 @@ mixin tabs(tabslength)
 					label(for="tab_1").tabs__label Tab 1
 					div.tabs__tabs-info
 						h2 The forest is a first-person open
-						img(src="img/city.jpg")
+						img(src="img/#.jpg")
 						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
 						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						a(href="404.html").tabs__tabs-info__btn Download
