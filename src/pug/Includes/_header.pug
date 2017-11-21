@@ -1,30 +1,32 @@
 header
 	div.header_wrap
-		span.logo
-		span.menu_button
-		-var menu=["index","About us","Contacts"]
-		nav
-			ul.menu
-				each item in menu
-					li
-						if item === currentpage && item === "index"
-							a.active(href="#")=home
-						else if item != currentpage && item === "index"
-							a(href=item.toLowerCase().replace("\ ", "-")+".html")=home
-						else if item === currentpage 
-							a.active(href="#")=item
-						else if item != currentpage
-							a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
+		div.header_wrapper
+			span.logo
+			span.menu_button
+			-var menu=["index","About us","Contacts"]
+			nav
+				ul.menu
+					each item in menu
+						li
+							if item === currentpage && item === "index"
+								a.active(href="#")=home
+							else if item != currentpage && item === "index"
+								a(href=item.toLowerCase().replace("\ ", "-")+".html")=home
+							else if item === currentpage 
+								a.active(href="#")=item
+							else if item != currentpage
+								a(href=item.toLowerCase().replace("\ ", "-")+".html")=item
 	div.header-content
-		div.header-content__description
-			h1 Wo<span>o</span>d
-			h2 The forest is a large area with trees or other woody vegetation
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			a(href="404.html") Download
-		div.header-content__form
-			-var headerform=[{type:"text", placeholder:"Name"},{type:"email",placeholder:"Email"},{type:"text", placeholder:"Message"}]
-			form(action="#")
-				p The <span>game's</span> pre-alpha
-				each item in headerform
-					input(type=item.type placeholder=item.placeholder value=item.value required)/
-				button(type="submit") Get started
+		div.header-content__wrap
+			div.header-content__description
+				h1 Wo<span>o</span>d
+				h2 The forest is a large area <span>with trees or other woody vegetation</span>
+				p Forests at different latitudes form distinctly different ecozones: boreal forests near the poles tend to consist of evergreens, while tropical forests near the equator tend to be distinct from the temperate
+				a(href="404.html") Download
+			div.header-content__form
+				-var headerform=[{type:"text", placeholder:"Name"},{type:"email",placeholder:"Email"},{type:"text", placeholder:"Message"}]
+				form(action="#")
+					p The <span>game's</span> pre-alpha
+					each item in headerform
+						input(type=item.type placeholder=item.placeholder value=item.value required)/
+					button(type="submit") Get started
