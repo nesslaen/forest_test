@@ -241,3 +241,11 @@ nav {
     left: 50%;
     top: 46%;
     transform: translate(-50%, -50%); } }
+
+.tabs input[type="radio"] {
+  display: none; }
+
+.tabs ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }

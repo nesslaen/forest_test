@@ -7,13 +7,13 @@ mixin head-meta(title, charset,href)
 mixin tabs(tabslength)
 	div.tabs
 		ul
-			-for(var x=0; x<tabslength; x++)
+			-for(var x=1; x<=tabslength; x++)
 				li
-					input(type="radio" name="tab" checked="checked" id="tab_1")
-					label(for="tab_1").tabs__label Tab 1
+					input(type="radio" name="tab" checked="checked" id="tab_"+x)
+					label(for="tab_"+x).tabs__label Tab #{x}
 					div.tabs__tabs-info
 						h2 The forest is a first-person open
-						img(src="img/#.jpg")
+						img(src="img/city.jpg")
 						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
 						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 						a(href="404.html").tabs__tabs-info__btn Download
