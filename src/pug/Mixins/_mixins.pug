@@ -13,19 +13,21 @@ mixin tabs(tabslength)
 						input(type="radio" name="tab" checked="checked" id="tab_"+x)
 						label(for="tab_"+x).tabs__label Tab #{x}
 						div.tabs__tabs-info
-							h2 The forest is a first-person open TAB#{x}
-							img(src="img/city.jpg")
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							h2 The forest is a first-person open
+							div.tabs__tabs-info__img
+								img(src="img/city.jpg")
+							p In The Forest, the player must survive on a forested island after a plane crash during which mutants are seen taking the player's son away. The player survives by creating shelter
+							p Inhabiting the island, along with various woodland creatures, are a tribe of nocturnal, cannibalistic mutants who dwell in deep caves beneath the island. 
 							a(href="404.html").tabs__tabs-info__btn Download
 					else if x != 1
 						input(type="radio" name="tab" id="tab_"+x)
 						label(for="tab_"+x).tabs__label Tab #{x}
 						div.tabs__tabs-info
-							h2 The forest is a first-person open TAB#{x}
-							img(src="img/city.jpg")
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							h2 The forest is a first-person open
+							div.tabs__tabs-info__img
+								img(src="img/lake"+x+".jpg")
+							p In The Forest, the player must survive on a forested island after a plane crash during which mutants are seen taking the player's son away. The player survives by creating shelter
+							p Inhabiting the island, along with various woodland creatures, are a tribe of nocturnal, cannibalistic mutants who dwell in deep caves beneath the island.
 							a(href="404.html").tabs__tabs-info__btn Download
 
 

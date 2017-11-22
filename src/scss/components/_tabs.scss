@@ -1,7 +1,9 @@
 .tabs{
 	position: relative;
-	height: 510px;
+	height: 560px;
 	margin-bottom: 24px;
+	padding-top: 24px;
+	background-color: $lightgrey;
 	input[type="radio"]{
     	display: none;
 	}
@@ -11,13 +13,26 @@
 		margin: 0 0 16px;
 		padding: 0;
 		list-style-type: none;
+		li{
+			margin-left: 2px;
+		}
 	}
 	li > div, input[type="radio"] {
     	position: absolute;
 	}
 
+	input[type="radio"] + label{
+		display: block;
+		background: $darkgrey;
+    	padding: 16px 8px;
+    	color: #fff;
+    	font-size: 14px;
+    	text-transform: uppercase;
+	}
+
 	input[type="radio"]:checked + label {
-    position: relative;
+		position: relative;
+		background: $orange2;
 	}
 	
 	.tabs__tabs-info{
@@ -27,5 +42,51 @@
 	input[type="radio"]:checked ~ div{
 		display: block;
 		left: 0;
+		padding: 16px 8px;
+	}
+
+	h2{
+		font-size: 16px;
+		margin: 0 0 16px;
+		text-align: center;
+	}
+
+	p{
+		font-size: 14px;
+		color: $grey;
+		margin: 0 0 16px;
+	}
+
+	.tabs__tabs-info__img{
+		width: 302px;
+	    height: 208px;
+	    overflow: hidden;
+	    margin: 0 auto 16px;
+	    img{
+	    	position: relative;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+	    }
+	}
+
+	.tabs__tabs-info__btn{
+		display: block;
+		color: #fff;
+		background: $orange2;
+		text-decoration: none;
+	    width: 136px;
+	    margin: 0 auto;
+	    text-align: center;
+	    line-height: 32px;
+	    &::after{
+	    	display: block;
+	    	content: '';
+	    	clear: both;
+	    }
+		&:hover{
+			background: $orange;
+			cursor: pointer;
+		}
 	}
 }
