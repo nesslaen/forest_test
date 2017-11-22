@@ -9,14 +9,24 @@ mixin tabs(tabslength)
 		ul
 			-for(var x=1; x<=tabslength; x++)
 				li
-					input(type="radio" name="tab" checked="checked" id="tab_"+x)
-					label(for="tab_"+x).tabs__label Tab #{x}
-					div.tabs__tabs-info
-						h2 The forest is a first-person open
-						img(src="img/city.jpg")
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-						a(href="404.html").tabs__tabs-info__btn Download
+					if x === 1
+						input(type="radio" name="tab" checked="checked" id="tab_"+x)
+						label(for="tab_"+x).tabs__label Tab #{x}
+						div.tabs__tabs-info
+							h2 The forest is a first-person open TAB#{x}
+							img(src="img/city.jpg")
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							a(href="404.html").tabs__tabs-info__btn Download
+					else if x != 1
+						input(type="radio" name="tab" id="tab_"+x)
+						label(for="tab_"+x).tabs__label Tab #{x}
+						div.tabs__tabs-info
+							h2 The forest is a first-person open TAB#{x}
+							img(src="img/city.jpg")
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias magni eius repudiandae
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							a(href="404.html").tabs__tabs-info__btn Download
 
 
 
